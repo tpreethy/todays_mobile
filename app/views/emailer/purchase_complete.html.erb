@@ -1,0 +1,13 @@
+Hello <%= @user.name %></h1><br>
+                          <h2> Thank you for shopping with us. </h2><br>
+                    
+        
+        your order has been processed.
+        
+        here are the details
+        
+        <% @cart.line_items.each do |item|%>
+        Model Name: <%= item.store.model_name%>
+        Product Price:<%= number_to_currency(item.store.price)%>
+        <%end%>
+        

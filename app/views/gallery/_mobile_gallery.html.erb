@@ -1,0 +1,20 @@
+<div class="section group">
+
+<% @mobile_gallery.each do |mobile|%>
+<div class="grid_1_of_4 images_1_of_4 products-info">
+
+<td><%= image_tag mobile.image.url(:medium) %><br />
+Model Name : <%= mobile.model_name %><br />
+Brand : <%= mobile.brand %><br />
+Color :<%= mobile.color %><br />
+<h3>Price : <%= mobile.price %></h3>
+<%= button_to 'Add to Cart', line_items_path(:store_id => mobile.id) %> </td>
+
+
+				
+</div>
+<% end %>
+</div>
+
+
+

@@ -1,0 +1,15 @@
+
+<% if line_item == @current_item %>
+<tr id="current_item">
+<% else %>
+<tr>
+<% end %>
+	<h2><td><%= line_item.quantity %> &times;</td>
+	<td><%= line_item.store.model_name %></td></h2>
+	<td class="item_price">&nbsp;&nbsp;&nbsp;&nbsp;<%= number_to_currency(line_item.total_price) %></td><br>
+	
+</tr>
+
+
+  
+  

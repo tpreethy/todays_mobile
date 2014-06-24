@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todays Mobile Admin</title>
+  
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<% if session[:admin] %>
+                
+                  <li><%= link_to "Logout", :controller => "admin", :action => "logout" %></li>
+                <% else %>
+                 <li> <%= link_to "Login", :controller => "admin", :action => "login" %></li>
+
+                <% end %>
+
+<%= yield %>
+
+</body>
+</html>

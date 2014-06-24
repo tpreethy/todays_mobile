@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @store.image.url(:medium) %>
+<p>
+  <strong>Model name:</strong>
+  <%= @store.model_name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @store.brand %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @store.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @store.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @store.description %>
+</p>
+
+<p>
+  <strong>Feature1:</strong>
+  <%= @store.feature1 %>
+</p>
+
+<p>
+  <strong>Feature2:</strong>
+  <%= @store.feature2 %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
